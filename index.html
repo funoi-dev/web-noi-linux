@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>带有Dock栏的网页示例</title>
+    <title>Noi Linux on web</title>
     <style>
         body {
             margin: 0;
@@ -16,7 +16,7 @@
             flex-direction: column;
             justify-content: flex-start;
             position: fixed;
-            background-color: #333;
+            background-color: #141414;
             width: 70;
             height: 100%;
         }
@@ -36,13 +36,13 @@
             margin: 10px;
             /* 设置图片之间的间距 */
         }
-        /* .dock img:hover {
-            transform: scale(1.1);
-            border-radius: 7px;
-        } */
         
-        .dock a.active img {
-            border-color: #777;
+        .dock img:hover {
+            border-color: #2B2B2B;
+        }
+        
+        .dock button.active img {
+            border-color: #2B2B2B;
         }
         /* 让Dock栏靠左并且上下填满页面 */
         
@@ -57,12 +57,12 @@
 
 <body>
     <div class="dock">
-        <a href="#" class="active">
-            <img src="./pic/vscode.png" alt="Dock 1">
-        </a>
-        <a href="#">
+        <button>
+            <img src="./pic/vscode.png" alt="Dock 1" class="active">
+        </button>
+        <button>
             <img src="./pic/codeblocks.png" alt="Dock 2">
-        </a>
+        </button>
         <a href="#">
             <img src="./pic/calculator.png" alt="Dock 3">
         </a>
@@ -73,6 +73,8 @@
             <img src="./pic/bash.png" alt="Dock 5">
         </a>
     </div>
+    <div class="background">
+        <img </div>
 </body>
 
 </html>
