@@ -1,0 +1,29 @@
+<!-- 写一个网页，显示"分辨率过低，请全屏使用"-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>警告</title>
+</head>
+
+<body>
+    <!-- add by javascript-->
+</body>
+<script type="text/javascript">
+    var params = window.location.search.substr(1);
+    console.log(params);
+    switch (params) {
+        case "1":
+            document.write("<h1>警告：</h1>");
+            document.write("<h1>分辨率过低，请全屏使用</h1>");
+            break;
+        case "2":
+            document.write("<h1>错误：</h1>");
+            document.write("<h1>未认证的网站，请前往dev.dev使用</h1>");
+            break;
+    }
+</script>
+
+</html>

@@ -11,7 +11,13 @@
             font-family: Arial, sans-serif;
         }
         
+        button {
+            /* 让button与dock一个颜色 */
+            background-color: #141414;
+        }
+        
         .dock {
+            opacity: 0.8;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -52,29 +58,57 @@
             height: 100vh;
             /* 设置页面高度为视口高度，使Dock栏上下填满页面 */
         }
+        /* 让img填充满整个页面 */
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        img.hide {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
+    <script type="text/javascript">
+        if (window.innerHeight < 500) {
+            window.location.href = "./err.html?1";
+        }
+        if (location.href != "http://localhost:8080/index.html") {
+            window.location.href = "./err.html?2";
+        }
+    </script>
     <div class="dock">
-        <button>
-            <img src="./pic/vscode.png" alt="Dock 1" class="active">
-        </button>
-        <button>
-            <img src="./pic/codeblocks.png" alt="Dock 2">
-        </button>
-        <a href="#">
-            <img src="./pic/calculator.png" alt="Dock 3">
+        <a>
+            <img src="" alt="Dock 1" class="hide">
         </a>
-        <a href="#">
-            <img src="./pic/text-editor.png" alt="Dock 4">
+        <a>
+            <img src="" alt="Dock 2" class="hide">
         </a>
-        <a href="#">
-            <img src="./pic/bash.png" alt="Dock 5">
+        <a>
+            <img src="" alt="Dock 3" class="hide">
+        </a>
+        <a>
+            <img src="" alt="Dock 4" class="hide">
+        </a>
+        <a>
+            <img src="" alt="Dock 5" class="hide">
+        </a>
+        <a>
+            <img src="" alt="Dock 6" class="hide">
+        </a>
+        <a>
+            <img src="" alt="Dock 7" class="hide">
+        </a>
+        <a>
+            <img src="" alt="Dock 8" class="hide">
         </a>
     </div>
-    <div class="background">
-        <img </div>
+    <!--背景图片-->
+    <img src="./pic/wp2.png" class="background">
 </body>
 
 </html>
